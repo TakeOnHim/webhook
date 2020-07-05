@@ -15,6 +15,16 @@
   <meta name="keywords" content="discord,TakeOnHim,webhook">
   <meta name="title" content="Discord Webhook Sender">
   <link rel="stylesheet" href="stylesheet.css" type="text/css">
+  var blurPageTitle = document.title+' ';
+changeTitle = function(){
+   var letter = document.title[0];
+   blurPageTitle = blurPageTitle.substr(1) + letter;
+   document.title = blurPageTitle;
+   changeTitleTimer = setTimeout(changeTitle, 100);
+};
+stopChangingTitle = function(){
+    clearTimeout(changeTitleTimer);
+}
   </head>
   <body>
 
